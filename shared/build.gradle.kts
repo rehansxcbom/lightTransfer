@@ -51,9 +51,15 @@ kotlin {
             implementation(libs.compose.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodelCompose)
             implementation(libs.androidx.lifecycle.runtimeCompose)
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
+            implementation("io.github.g0dkar:qrcode-kotlin:4.1.1")
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
+        }
+        iosMain.dependencies {
+        }
+        jvmMain.dependencies {
         }
         getByName("androidDeviceTest").dependencies {
             implementation(libs.androidx.testRunner)
